@@ -1,0 +1,232 @@
+@import "../scss/fontawesome.scss";
+@import "../scss/solid.scss";
+
+$primary: #501946;
+$secondary: #194650;
+$bg-color: #465019;
+$white: #fff;
+$dark: #333;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+#hire{
+    padding: 10px 16px;
+    font-size: 18px;
+    font-weight: bold;
+    color: $white;
+    background-color: $primary;
+    border-radius: 5px 10px;
+    text-decoration: none;
+    transition: ease-in-out .4s;
+}
+
+#project-header{
+    padding: 20px;
+}
+
+hr{
+    width: 50%;
+    margin-left: 25%;
+}
+
+
+
+#hire:hover{
+    color: $primary;
+    background-color: $white;
+}
+
+#btn{
+    padding: 7px 15px;
+    font-size: 16px;
+    border: 1px solid $white;
+    color: $primary;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+#btn:hover{
+    color: $primary;
+    background-color: $white;
+}
+
+body{
+    line-height: 1.5;
+    background: $dark;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+
+    #navbar{
+        background-color: $primary;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+
+        ul{
+            display: flex;
+            list-style: none;
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+           
+
+            li{
+                padding: 10px;
+
+                a{
+                    color: $white;
+                    text-decoration: none;
+                    border: 1px solid $white;
+                    padding: 3px 7px;
+                    font-weight: bold;
+                    transition: ease-in-out .4s;
+                }
+
+                a:hover{
+                   background-color: $white;
+                   color: $primary;
+                }
+            }
+        }
+    }
+
+    #welcome-section{
+        margin-top: 86px;
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        background: #194650bd;
+        background-blend-mode: soft-light;
+        background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.5), rgba(136, 136, 206, 0.7)), url(../images/sheddy.jpeg);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+
+        @media screen and(min-width: 630px){
+            background-position-y: 0px;
+        }
+
+        h1{
+            font-size: 40px;
+            
+        }
+
+        h2{
+           color: $primary;
+           background-color: $white;
+           padding: 8px;
+           text-align: center;
+           border-radius: 8px;
+           margin-bottom: 30px;
+        }
+    }
+
+    #projects{
+        text-align: center;
+        
+        .box{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin: 15px;
+
+            @media screen and(min-width:630px) {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .project-tile{
+                    flex: 0 1 49.2%;
+                }
+
+            }
+
+            
+            @media screen and(min-width:820px) {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+
+                .project-tile{
+                    flex: 0 1 32.5%;
+                }
+
+            }
+            
+          
+
+            .project-tile{
+                min-width: 200px;
+                width: 100%;
+                margin-bottom: 20px;
+                max-width: 550px;
+                padding-bottom: 20px;
+
+                figcaption{
+                    color: $white;
+                    font-weight: bold;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                }
+
+                a{
+                    color: $white;
+                    text-decoration: none;
+                    transition: ease-in-out .4s;
+                }
+
+                a:hover{
+                    background-color: $white;
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    #footer{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary;
+        padding: 30px 20px;
+
+        #footer-header{
+            margin-bottom: 15px;
+        }
+
+        #footer-links{
+            
+            a{
+                color: $white;
+                font-size: 17px;
+                padding: 7px;
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+
